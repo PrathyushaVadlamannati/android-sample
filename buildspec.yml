@@ -17,6 +17,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - ln -s /usr/lib/libncursesw.so.6.0 /usr/lib/libncurses.so.5 
       - sudo ./gradlew --debug --stacktrace build
   post_build:
     commands:
