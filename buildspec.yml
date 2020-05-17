@@ -16,9 +16,8 @@ phases:
       - /opt/android-sdk-linux/tools/android update sdk --no-ui
   build:
     commands:
-      - echo Build started on `date`
-      - ln -s /usr/lib/libncursesw.so.6.0 /usr/lib/libncurses.so.5 
-      - ./gradlew --debug --stacktrace build
+      - echo Build started on `date` 
+      - ./gradlew --debug --stacktrace --scan build
   post_build:
     commands:
       - echo Build completed on `date`
