@@ -21,8 +21,7 @@ phases:
     commands:
       - echo Build started on `date` 
       - java -version
-      - chmod +x accept-licenses.sh
-      - ./accept-licenses.sh
+      - yes | sdkmanager --licenses && yes | sdkmanager --update
       - ./gradlew --debug --stacktrace build
   post_build:
     commands:
