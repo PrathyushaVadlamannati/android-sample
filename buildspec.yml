@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 
 phases:
   install:
@@ -18,6 +18,7 @@ phases:
   build:
     commands:
       - echo Build started on `date` 
+      - java -version
       - ./gradlew --debug --stacktrace build
   post_build:
     commands:
