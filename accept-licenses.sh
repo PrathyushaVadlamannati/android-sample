@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
 
 set timeout 1800
-set cmd [lindex "$env(ANDROID_HOME)/tools/bin/sdkmanager --licenses"]
+set cmd [lindex "$env(ANDROID_HOME)/tools/android --licenses"]
 
 spawn {*}$cmd
 expect {
